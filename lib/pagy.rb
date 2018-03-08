@@ -1,5 +1,4 @@
 require 'pathname'
-require 'ostruct'
 
 # This class takes a few integers (such as collection-count, page-number,
 # items-per-page-limit, etc.), does some simple aritmetic and creates a very
@@ -24,13 +23,13 @@ class Pagy ; VERSION = '0.4.3'
   #                set it only if the collection was pre-offset(ted): it gets added to the final offset
   # initial/final: max pages to show from the first/last page
   # before/after:  max pages before/after the current page
-  Vars = OpenStruct.new(items:20, offset:0, initial:1, before:4, after:4, final:1)
+  Vars = { items:20, offset:0, initial:1, before:4, after:4, final:1 }
 
   attr_reader :count, :page, :items, :vars, :pages, :last, :offset, :from, :to, :prev, :next, :series
 
   # merge and validate the options, do some simple aritmetic and set the instance variables
   def initialize(vars)
-    @vars        = Vars.to_h.merge!(vars)                                 # global vars + instance vars (bang faster)
+    @vars        = Vars.merge(vars)                                       # global vars + instance vars (bang faster)
     @vars[:page] = (@vars[:page]||1).to_i                                 # set page to 1 if nil
     [:count, :items, :offset, :initial, :before, :page, :after, :final].each do |k|
       @vars[k] >= 0 rescue nil || raise(ArgumentError, "expected #{k} >= 0; got #{@vars[k].inspect}")
