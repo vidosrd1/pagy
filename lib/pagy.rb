@@ -10,8 +10,8 @@ class Pagy ; VERSION = '0.4.3'
   # root pathname to get the path of pagy files like templates or locales
   def self.root; Pathname.new(__FILE__).dirname end
 
-  # default core-vars
-  Vars = { items:20, offset:0, initial:1, before:4, after:4, final:1 }
+  # default vars
+  I18n, Vars = {}, { items:20, offset:0, initial:1, before:4, after:4, final:1 }
 
   attr_reader :count, :page, :items, :vars, :pages, :last, :offset, :from, :to, :prev, :next, :series
 

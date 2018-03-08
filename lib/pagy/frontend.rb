@@ -1,5 +1,9 @@
+# this file will get autoloaded, so other constant like ::I18n will be already set
 require 'yaml'
 class Pagy
+
+  # I18n default vars reversed merged to keep configuration
+  I18n = { gem: !!defined?(::I18n), file: Pagy.root.join('locales', 'pagy.yml').to_s, plurals: -> (c) {c==0 && 'zero' || c==1 && 'one' || 'other'} }.merge!(I18n)
 
   # All the code here has been optimized for performance: it may not look very pretty
   # (as most code dealing with many long strings), but its performance makes it very sexy! ;)
@@ -77,24 +81,24 @@ class Pagy
     end
 
 
-    hash = YAML.load_file Vars[:i18n_file] || Pagy.root.join('locales', 'pagy.yml')
-    I18N = hash[hash.keys.first].freeze
-
-    # Similar to I18n.t for interpolation and pluralization, with the following constraints:
-    # - the path/keys option is supported only in dot-separated string or symbol format
-    # - the :scope and :default options are not supported
-    # - no exception are raised: the errors are returned as translated strings
-    def pagy_t(path, vars={})
-      value = I18N.dig(*path.to_s.split('.'.freeze))
-      if value.is_a?(Hash)
-        vars.has_key?(:count) or return value
-        plural = (Vars[:i18n_plurals] ||= -> (c) {c==0 && 'zero' || c==1 && 'one' || 'other'}).call(vars[:count])
-        value.has_key?(plural) or return %(invalid pluralization data: "#{path}" cannot be used with count: #{vars[:count]}; key "#{plural}" is missing.)
-        value = value[plural]
-      end
-      value or return %(translation missing: "#{path}")
-      sprintf value, Hash.new{|h,k| "%{#{k}}"}.merge!(vars)    # interpolation
-    end
+    I18n[:gem] ? (::I18n.load_path << I18n[:file]; def pagy_t(*a); ::I18n.t(*a) end)
+               : ( I18N_DATA = YAML.load_file(I18n[:file]).first[1].freeze  # only data from the first locale in the file
+                   # Similar to I18n.t for interpolation and pluralization (no translation)
+                   # 5x faster than I18n.t with the following constraints:
+                   # - the path/keys option is supported only in dot-separated string or symbol format
+                   # - the :scope and :default options are not supported
+                   # - no exception raised: the errors are returned as translated strings
+                   def pagy_t(path, vars={})
+                     value = I18N_DATA.dig(*path.to_s.split('.'.freeze))
+                     if value.is_a?(Hash)
+                       vars.has_key?(:count) or return value
+                       plural = I18n[:plurals].call(vars[:count])
+                       value.has_key?(plural) or return %(invalid pluralization data: "#{path}" cannot be used with count: #{vars[:count]}; key "#{plural}" is missing.)
+                       value = value[plural]
+                     end
+                     value or return %(translation missing: "#{path}")
+                     sprintf value, Hash.new{|h,k| "%{#{k}}"}.merge!(vars)    # interpolation
+                   end )
 
   end
 end
