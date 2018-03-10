@@ -1,11 +1,5 @@
 require 'pathname'
 
-# This class takes a few integers (such as collection-count, page-number,
-# items-per-page-limit, etc.), does some simple aritmetic and creates a very
-# small object (~3k) with all is needed for pagination and navigation.
-# Notice that it doesn't actually do any pagination, nor navigation... that is
-# done with a few helpers in the Pagy::Backend and Pagy::Frontend modules.
-
 class Pagy ; VERSION = '0.4.3'
 
   autoload :Backend,  'pagy/backend'
@@ -16,13 +10,7 @@ class Pagy ; VERSION = '0.4.3'
   # root pathname to get the path of pagy files like templates or locales
   def self.root; Pathname.new(__FILE__).dirname end
 
-  # default options
-  # items:         max items per page: it gets adjusted for the last page,
-  #                so it will pull the right items if the collection was pre-limit(ed)
-  # offset:        the initial offset of the whole collection before pagination
-  #                set it only if the collection was pre-offset(ted): it gets added to the final offset
-  # initial/final: max pages to show from the first/last page
-  # before/after:  max pages before/after the current page
+  # default core-vars
   Vars = { items:20, offset:0, initial:1, before:4, after:4, final:1 }
 
   attr_reader :count, :page, :items, :vars, :pages, :last, :offset, :from, :to, :prev, :next, :series
