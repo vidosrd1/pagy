@@ -56,8 +56,13 @@ class Pagy
     def pagy_url_for(n)
       url    = File.join(request.script_name.to_s, request.path_info)
       params = request.GET.merge('page'.freeze => n.to_s)
-      url << '?' << Rack::Utils.build_nested_query(params)
+      url << '?' << Rack::Utils.build_nested_query(pagy_params(params))
     end
+
+
+    # sub-method called only by pagy_url_for
+    # here for easy customization of params through overriding
+    def pagy_params(params) params end
 
 
     MARKER = "-pagy-#{'pagy'.hash}-".freeze
