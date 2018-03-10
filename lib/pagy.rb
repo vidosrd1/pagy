@@ -10,14 +10,14 @@ class Pagy ; VERSION = '0.4.3'
   # root pathname to get the path of pagy files like templates or locales
   def self.root; Pathname.new(__FILE__).dirname end
 
-  # default vars
-  I18n, Vars = {}, { items:20, offset:0, initial:1, before:4, after:4, final:1 }
+  # default core vars
+  I18N, VARS = {}, { items:20, offset:0, initial:1, before:4, after:4, final:1 }
 
   attr_reader :count, :page, :items, :vars, :pages, :last, :offset, :from, :to, :prev, :next, :series
 
   # merge and validate the options, do some simple aritmetic and set the instance variables
   def initialize(vars)
-    @vars        = Vars.merge(vars)                                       # global vars + instance vars (bang faster)
+    @vars        = VARS.merge(vars)                                       # global vars + instance vars (bang faster)
     @vars[:page] = (@vars[:page]||1).to_i                                 # set page to 1 if nil
     [:count, :items, :offset, :initial, :before, :page, :after, :final].each do |k|
       @vars[k] >= 0 rescue nil || raise(ArgumentError, "expected #{k} >= 0; got #{@vars[k].inspect}")
