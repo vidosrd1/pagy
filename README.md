@@ -1,17 +1,19 @@
 # Pagy
 
-[![Gem Version](https://img.shields.io/gem/v/pagy.svg?label=pagy&colorA=99004d&colorB=cc0066)](https://rubygems.org/gems/pagy)
-![ruby](https://img.shields.io/badge/ruby-2.5+-ruby.svg?colorA=99004d&colorB=cc0066)
-[![Build Status](https://img.shields.io/github/workflow/status/ddnexus/pagy/Pagy%20CI/master)](https://github.com/ddnexus/pagy/actions?query=branch:master)
-[![CodeCov](https://img.shields.io/codecov/c/github/ddnexus/pagy.svg?colorA=1f7a1f&colorB=2aa22a)](https://codecov.io/gh/ddnexus/pagy)
-![Rubocop Status](https://img.shields.io/badge/rubocop-passing-rubocop.svg?colorA=1f7a1f&colorB=2aa22a)
-[![MIT license](https://img.shields.io/badge/license-MIT-mit.svg?colorA=1f7a1f&colorB=2aa22a)](http://opensource.org/licenses/MIT)
- [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4329/badge)](https://bestpractices.coreinfrastructure.org/projects/4329)
-![Commits](https://img.shields.io/github/commit-activity/y/ddnexus/pagy.svg?label=commits&colorA=004d99&colorB=0073e6)
-![Downloads](https://img.shields.io/gem/dt/pagy.svg?colorA=004d99&colorB=0073e6)
-[![Chat](http://img.shields.io/badge/gitter-ruby--pagy-purple.svg?colorA=800080&colorB=b300b3)](https://gitter.im/ruby-pagy/Lobby)
+<span>[![Gem Version](https://img.shields.io/gem/v/pagy.svg?label=pagy&colorA=99004d&colorB=cc0066)](https://rubygems.org/gems/pagy)</span> <span>
+[![ruby](https://img.shields.io/badge/ruby-2.5+%20*-ruby.svg?colorA=99004d&colorB=cc0066)](https://ddnexus.github.io/pagy/docs/prerequisites/#ruby)</span> <span>
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ddnexus/pagy/pagy-ci.yml?branch=master)](https://github.com/ddnexus/pagy/actions/workflows/pagy-ci.yml?query=branch%3Amaster)</span> <span>
+[![CodeCov](https://img.shields.io/codecov/c/github/ddnexus/pagy.svg?colorA=1f7a1f&colorB=2aa22a)](https://codecov.io/gh/ddnexus/pagy)</span> <span>
+![Rubocop Status](https://img.shields.io/badge/rubocop-passing-rubocop.svg?colorA=1f7a1f&colorB=2aa22a)</span> <span>
+[![MIT license](https://img.shields.io/badge/license-MIT-mit.svg?colorA=1f7a1f&colorB=2aa22a)](http://opensource.org/licenses/MIT)</span> <span>
+ [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4329/badge)](https://bestpractices.coreinfrastructure.org/projects/4329)</span> <span>
+![Commits](https://img.shields.io/github/commit-activity/y/ddnexus/pagy.svg?label=commits&colorA=004d99&colorB=0073e6)</span> <span>
+![Downloads](https://img.shields.io/gem/dt/pagy.svg?colorA=004d99&colorB=0073e6)</span> <span>
+[![Stars](https://shields.io/github/stars/ddnexus/pagy?style=social)](https://github.com/ddnexus/pagy/stargazers)</span>
 
 ## 🏆 The Best Pagination Ruby Gem 🥇
+
+Pagy is focused on performance and flexibility.
 
 ### ~ 40x Faster!
 
@@ -39,45 +41,41 @@ See the [Detailed Gems Comparison](http://ddnexus.github.io/pagination-compariso
 
 </details>
 
-### 👍 If you like Pagy, give it a star! ⭐  
-
-Thank you for showing your support!
+<br>
 
 ## 🤩 It does it all. Better.
 
-- **It works in any environment**<br>With Rack frameworks like Rails, Sinatra, Padrino, ecc. or in pure ruby even without Rack
-- **It works with any collection**<br>With any ORM, any DB, any search gem, [elasticsearch_rails](http://ddnexus.github.io/pagy/extras/elasticsearch_rails), [meilisearch](http://ddnexus.github.io/pagy/extras/meilisearch), [searchkick](http://ddnexus.github.io/pagy/extras/searchkick), `ransack`, and just any list, even if you cannot count it
-- **It supports all kinds of pagination**<br>[calendar](http://ddnexus.github.io/pagy/extras/calendar), [countless](http://ddnexus.github.io/pagy/extras/countless), [geared](http://ddnexus.github.io/pagy/extras/gearbox), [incremental, auto-incremental, infinite](http://ddnexus.github.io/pagy/extras/support), [headers](http://ddnexus.github.io/pagy/extras/headers), [JSON](http://ddnexus.github.io/pagy/extras/metadata), [cursor](https://github.com/Uysim/pagy-cursor)
-- **It supports all kinds of CSS Frameworks**<br>[bootstrap](http://ddnexus.github.io/pagy/extras/bootstrap), [bulma](http://ddnexus.github.io/pagy/extras/bulma), [foundation](http://ddnexus.github.io/pagy/extras/foundation), [materialize](http://ddnexus.github.io/pagy/extras/materialize), [semantic](http://ddnexus.github.io/pagy/extras/semantic), [uikit](http://ddnexus.github.io/pagy/extras/uikit), [tailwind](http://ddnexus.github.io/pagy/extras/tailwind)
-- **It supports faster client-side rendering**<br>With classic or innovative UI components (see [Javascript Navs](https://ddnexus.github.io/pagy/api/javascript#javascript-navs) and [Javascript Combo Navs](https://ddnexus.github.io/pagy/api/javascript#javascript-combo-navs)) or by serving [JSON](http://ddnexus.github.io/pagy/extras/metadata) to your favorite Javascript framework
+- **It works in any environment**<br>With Rack frameworks (Rails, Sinatra, Padrino, etc.) or in pure ruby without Rack
+- **It works with any collection**<br>With any ORM, any DB, any search gem, [elasticsearch_rails](https://ddnexus.github.io/pagy/docs/extras/elasticsearch_rails), [meilisearch](https://ddnexus.github.io/pagy/docs/extras/meilisearch), [searchkick](https://ddnexus.github.io/pagy/docs/extras/searchkick), `ransack`, and just any list, even if you cannot count it
+- **It supports all kinds of pagination**<br>[calendar](https://ddnexus.github.io/pagy/docs/extras/calendar "paginates by dates, rather than numbers"), [countless](https://ddnexus.github.io/pagy/docs/extras/countless "skips an extra 'count' query"), [geared](https://ddnexus.github.io/pagy/docs/extras/gearbox "varies the items fetched depending on the page number e.g. page 1: x items, but page 2: y items etc."), [incremental, auto-incremental, infinite](https://ddnexus.github.io/pagy/docs/extras/support), [headers](https://ddnexus.github.io/pagy/docs/extras/headers "useful for API pagination"), [JSON](https://ddnexus.github.io/pagy/docs/extras/metadata "provides pagination metadata - especially useful with frameworks like Vue, React etc. and you want to render your own pagination links"), [cursor](https://github.com/Uysim/pagy-cursor "Useful with large data sets, where performance becomes a concern (separate repository)")
+- **It supports all kinds of CSS Frameworks**<br>[bootstrap](https://ddnexus.github.io/pagy/docs/extras/bootstrap), [bulma](https://ddnexus.github.io/pagy/docs/extras/bulma), [foundation](https://ddnexus.github.io/pagy/docs/extras/foundation), [materialize](https://ddnexus.github.io/pagy/docs/extras/materialize), [semantic](https://ddnexus.github.io/pagy/docs/extras/semantic), [uikit](https://ddnexus.github.io/pagy/docs/extras/uikit), [tailwind](https://ddnexus.github.io/pagy/docs/extras/tailwind)
+- **It supports faster client-side rendering**<br>With classic or innovative UI components (see [Javascript Components](https://ddnexus.github.io/pagy/docs/api/javascript/)) or by serving [JSON](https://ddnexus.github.io/pagy/docs/extras/metadata) to your favorite Javascript framework
 - **It has 100% of test coverage** for Ruby, HTML and Javascript E2E (see [Pagy Workflows CI](https://github.com/ddnexus/pagy/actions))
 
 <details>
 
 ### Code Structure
 
-- **Pagy has a very slim core code** very easy to understand and use _(see [more...](https://ddnexus.github.io/pagy/api))_
-- **It has a quite fat set of optional extras** that you can explicitly require for very efficient and modular customization _(see [extras](https://ddnexus.github.io/pagy/extras))_
-- **It has no dependencies**: it produces its own HTML, URLs, i18n with its own specialized and fast code _(see [why...](https://ddnexus.github.io/pagy/index#specialized-code-instead-of-generic-helpers))_
+- **Pagy has a very slim core code** very easy to understand and use.
+- **It has a quite fat set of optional extras** that you can explicitly require for very efficient and modular customization _(see [extras](https://ddnexus.github.io/pagy/categories/extra/))_
+- **It has no dependencies**: it produces its own HTML, URLs, i18n with its own specialized and fast code
 - **Its methods are accessible and overridable** right where you use them (no pesky monkey-patching needed)
 
 ### Unlike the other gems
 
-- Pagy is very modular and does not load any unnecessary code in your app _(see [why...](https://ddnexus.github.io/pagy/how-to#configure-pagy))_
-- It doesn't impose limits on your code even with collections|scopes that already used `limit` and `offset` _(see [how...](https://ddnexus.github.io/pagy/how-to#paginate-a-pre-offsetted-and-pre-limited-collection))_
-- It works with fast helpers OR easy to edit templates _(see [more...](https://ddnexus.github.io/pagy/how-to#use-templates))_
-- It raises real `Pagy::OverflowError` exceptions that you can rescue from _(see [how...](https://ddnexus.github.io/pagy/how-to#handle-pagyoutofrangeerror-exception))_ or use the [overflow extra](http://ddnexus.github.io/pagy/extras/overflow) for a few ready to use common behaviors
-- It does not impose any difficult-to-override logic or output _(see [why...](https://ddnexus.github.io/pagy/index#really-easy-to-customize))_
-
-### Better Components
-
-Besides the classic pagination offered by the `pagy_nav` helpers, you can also use a couple of more performant alternatives:
-
-- [pagy_nav_js](http://ddnexus.github.io/pagy/api/javascript#javascript-navs): A faster and lighter classic looking UI, rendered on the client side with optional responsiveness:<br>![bootstrap_nav_js](docs/assets/images/bootstrap_nav_js-w.png)
-
-- [pagy_combo_nav_js](http://ddnexus.github.io/pagy/api/javascript#javascript-combo-navs): The fastest and lightest alternative UI _(48x faster, 48x lighter and 2,270x more efficient than Kaminari)_ that combines navigation and pagination info in a single compact element:<br>![bootstrap_combo_nav_js](docs/assets/images/bootstrap_combo_nav_js-w.png)
+- Pagy is very modular and does not load any unnecessary code (see [why...](https://ddnexus.github.io/pagy/quick-start#configure))_
+- is very modular and does not load any unnecessary code (see [why...](https://ddnexus.github.io/pagy/quick-start#configure))_
+- It doesn't impose limits even with collections|scopes that already used `limit` and `offset` _(see [how...](https://ddnexus.github.io/pagy/docs/how-to/#paginate-pre-offset-and-pre-limited-collections))_
+- doesn't impose limits even with collections|scopes that already used `limit` and `offset` _(see [how...](https://ddnexus.github.io/pagy/docs/how-to/#paginate-pre-offset-and-pre-limited-collections))_
+- It works with fast helpers OR easy to edit templates _(see [more...](https://ddnexus.github.io/pagy/docs/how-to/#use-templates))_
+- works with fast helpers OR easy to edit templates _(see [more...](https://ddnexus.github.io/pagy/docs/how-to/#use-templates))_
+- It raises `Pagy::OverflowError` exceptions that you can rescue from _(see [how...](https://ddnexus.github.io/pagy/docs/how-to/#handle-pagyoverflowerror-exceptions))_ or use the [overflow extra](https://ddnexus.github.io/pagy/docs/extras/overflow) for a few ready to use common behaviors
+- raises `Pagy::OverflowError` exceptions that you can rescue from _(see [how...](https://ddnexus.github.io/pagy/docs/how-to/#handle-pagyoverflowerror-exceptions))_ or use the [overflow extra](https://ddnexus.github.io/pagy/docs/extras/overflow) for a few ready to use common behaviors
+- It does not impose any difficult-to-override logic or output
 
 </details>
+
+<br>
 
 ## 😎 It's easy to use and customize
 
@@ -86,10 +84,6 @@ Besides the classic pagination offered by the `pagy_nav` helpers, you can also u
 <summary>Code for basic pagination...</summary>
 
 ```rb
-# Optionally override some pagy default with your own in the pagy initializer
-Pagy::DEFAULT[:items] = 10        # items per page
-Pagy::DEFAULT[:size]  = [1,4,4,1] # nav bar links
-
 # Include it in the controllers (e.g. application_controller.rb)
 include Pagy::Backend
 
@@ -100,12 +94,34 @@ include Pagy::Frontend
 @pagy, @records = pagy(Product.all)
 ```
 
-```erb
-<%# Render the navigation bar in your views %>
-<%== pagy_nav(@pagy) %>
+Optionally set your defaults in the pagy initializer:
+
+```rb
+# Optionally override some pagy default with your own in the pagy initializer
+Pagy::DEFAULT[:items] = 10        # items per page
+Pagy::DEFAULT[:size]  = [1,4,4,1] # nav bar links
+# Better user experience handled automatically
+require 'pagy/extras/overflow'
+Pagy::DEFAULT[:overflow] = :last_page
 ```
 
-_(See [Quick Start](https://ddnexus.github.io/pagy/how-to#quick-start))_
+```erb
+<%# Render a view helper in your views (skipping nav links for empty pages) %>
+<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+```
+
+Or, choose from the following view helpers:
+
+| View Helper Name                                                                                                                                                                        | Preview (Bootstrap Style shown)                                        |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| [`pagy_nav(@pagy)`](/docs/api/frontend)                                                                                                                                                 | ![`pagy_nav`](/docs/assets/images/bootstrap_nav.png)                   |
+| [`pagy_nav_js(@pagy)`](/pagy/docs/api/javascript/)                                                                                                                                      | ![`pagy_nav_js`](/docs/assets/images/bootstrap_nav_js.png)             |
+| [`pagy_info(@pagy)`](/docs/api/frontend)                                                                                                                                                | ![`pagy_info`](/docs/assets/images/pagy_info.png)                      |
+| [`pagy_combo_nav_js(@pagy)`](/pagy/docs/api/javascript/)                                                                                                                                | ![`pagy_combo_nav_js`](/docs/assets/images/bootstrap_combo_nav_js.png) |
+| [`pagy_items_selector_js`](/pagy/docs/api/javascript/)                                                                                                                                  | ![`pagy_items_selector_js`](/docs/assets/images/items_selector_js.png) |
+| [`pagy_nav(@calendar[:year])`](/pagy/docs/extras/calendar/)<br/>[`pagy_nav(@calendar[:month])`](/pagy/docs/extras/calendar/)<br/> (other units: `:quarter`, `:week`, `:day` and custom) | ![calendar extra](/docs/assets/images/calendar-app.png)                |
+
+_(See the [Quick Start](https://ddnexus.github.io/pagy/quick-start))_
 
 </details>
 
@@ -123,7 +139,7 @@ require 'pagy/extras/bootstrap'
 <%== pagy_bootstrap_nav(@pagy) %>
 ```
 
-_(See the [bootstrap extra](http://ddnexus.github.io/pagy/extras/bootstrap))_
+_(See all the [CSS Framework Extras](https://ddnexus.github.io/pagy/categories/frontend/))_
 
 </details>
 
@@ -143,7 +159,7 @@ response         = Article.pagy_search(params[:q])
 @pagy, @response = pagy_elasticsearch_rails(response)
 ```
 
-_(See the [elasticsearch_rails extra](http://ddnexus.github.io/pagy/extras/elasticsearch_rails))_
+_(See all the [Search Extras](https://ddnexus.github.io/pagy/categories/search/))_
 
 </details>
 
@@ -161,7 +177,7 @@ render json: { data: records,
                pagy: pagy_metadata(pagy) }
 ```
 
-_(See the [metadata extra](http://ddnexus.github.io/pagy/extras/metadata))_
+_(See all the [Backend Tools](https://ddnexus.github.io/pagy/categories/backend/))_
 
 </details>
 
@@ -179,7 +195,7 @@ pagy_headers_merge(pagy)
 render json: records
 ```
 
-_(See the [headers extra](http://ddnexus.github.io/pagy/extras/headers))_
+_(See all the [Backend Tools](https://ddnexus.github.io/pagy/categories/backend/))_
 
 </details>
 
@@ -191,94 +207,111 @@ Extras add special options and manage different components, behaviors, Frontend 
 
 ### Backend Extras
 
-- [arel](http://ddnexus.github.io/pagy/extras/arel): Better performance of grouped ActiveRecord collections
-- [array](http://ddnexus.github.io/pagy/extras/array): Paginate arrays efficiently, avoiding expensive array-wrapping and without overriding
-- [calendar](http://ddnexus.github.io/pagy/extras/calendar): Add pagination filtering by calendar time unit (year, quarter, month, week, day)
-- [countless](http://ddnexus.github.io/pagy/extras/countless): Paginate without the need of any count, saving one query per rendering
-- [elasticsearch_rails](http://ddnexus.github.io/pagy/extras/elasticsearch_rails): Paginate `ElasticsearchRails` response objects
-- [headers](http://ddnexus.github.io/pagy/extras/headers): Add RFC-8288 compliant http response headers (and other helpers) useful for API pagination
-- [meilisearch](http://ddnexus.github.io/pagy/extras/meilisearch): Paginate `Meilisearch` results
-- [metadata](http://ddnexus.github.io/pagy/extras/metadata): Provides the pagination metadata to Javascript frameworks like Vue.js, react.js, etc.
-- [searchkick](http://ddnexus.github.io/pagy/extras/searchkick): Paginate `Searchkick::Results` objects
+- [arel](https://ddnexus.github.io/pagy/docs/extras/arel): Provides better performance of grouped ActiveRecord collections
+- [array](https://ddnexus.github.io/pagy/docs/extras/array): Paginate arrays efficiently.
+- [calendar](https://ddnexus.github.io/pagy/docs/extras/calendar): Add pagination filtering by calendar time unit (year, quarter, month, week, day, custom)
+- [countless](https://ddnexus.github.io/pagy/docs/extras/countless): Paginate without the need of any count, saving one query per rendering
+- [elasticsearch_rails](https://ddnexus.github.io/pagy/docs/extras/elasticsearch_rails): Paginate `ElasticsearchRails` response objects
+- [headers](https://ddnexus.github.io/pagy/docs/extras/headers): Add RFC-8288 compliant http response headers (and other helpers) useful for API pagination
+- [meilisearch](https://ddnexus.github.io/pagy/docs/extras/meilisearch): Paginate `Meilisearch` results
+- [metadata](https://ddnexus.github.io/pagy/docs/extras/metadata): Provides the pagination metadata to Javascript frameworks like Vue.js, react.js, etc.
+- [searchkick](https://ddnexus.github.io/pagy/docs/extras/searchkick): Paginate `Searchkick::Results` objects
 
 ### Frontend Extras
 
-- [bootstrap](http://ddnexus.github.io/pagy/extras/bootstrap): Add nav, nav_js and combo_nav_js helpers for the Bootstrap [pagination component](https://getbootstrap.com/docs/4.1/components/pagination)
-- [bulma](http://ddnexus.github.io/pagy/extras/bulma): Add nav, nav_js and combo_nav_js helpers for the Bulma CSS [pagination component](https://bulma.io/documentation/components/pagination)
-- [foundation](http://ddnexus.github.io/pagy/extras/foundation): Add nav, nav_js and combo_nav_js helpers for the Foundation [pagination component](https://foundation.zurb.com/sites/docs/pagination.html)
-- [materialize](http://ddnexus.github.io/pagy/extras/materialize): Add nav, nav_js and combo_nav_js helpers for the Materialize CSS [pagination component](https://materializecss.com/pagination.html)
-- [navs](http://ddnexus.github.io/pagy/extras/navs): Add nav_js and combo_nav_js unstyled helpers
-- [semantic](http://ddnexus.github.io/pagy/extras/semantic): Add nav, nav_js and combo_nav_js helpers for the Semantic UI CSS [pagination component](https://semantic-ui.com/collections/menu.html)
-- [tailwind](http://ddnexus.github.io/pagy/extras/tailwind): Extra styles for [Tailwind CSS](https://tailwindcss.com)
-- [uikit](http://ddnexus.github.io/pagy/extras/uikit): Add nav, nav_js and combo_nav_js helpers for the UIkit [pagination component](https://getuikit.com/docs/pagination)
+- [bootstrap](https://ddnexus.github.io/pagy/docs/extras/bootstrap):  Add nav helpers and templates for the Bootstrap [pagination component](https://getbootstrap.com/docs/4.1/components/pagination)
+- [bulma](https://ddnexus.github.io/pagy/docs/extras/bulma): Add nav helpers and templates for the Bulma CSS [pagination component](https://bulma.io/documentation/components/pagination)
+- [foundation](https://ddnexus.github.io/pagy/docs/extras/foundation): Add nav helpers and templates for the Foundation [pagination component](https://foundation.zurb.com/sites/docs/pagination.html)
+- [materialize](https://ddnexus.github.io/pagy/docs/extras/materialize): Add nav helpers for the Materialize CSS [pagination component](https://materializecss.com/pagination.html)
+- [navs](https://ddnexus.github.io/pagy/docs/extras/navs): Adds the unstyled versions of the javascript-powered nav helpers.
+- [semantic](https://ddnexus.github.io/pagy/docs/extras/semantic): Add nav helpers for the Semantic UI CSS [pagination component](https://semantic-ui.com/collections/menu.html)
+- [tailwind](https://ddnexus.github.io/pagy/docs/extras/tailwind): Ready to use style snippet for [Tailwind CSS](https://tailwindcss.com)
+- [uikit](https://ddnexus.github.io/pagy/docs/extras/uikit): Add nav helpers and templates for the UIkit [pagination component](https://getuikit.com/docs/pagination)
 
 ### Extra Features and Tools
 
-- [Pagy::Console](https://ddnexus.github.io/pagy/api/console): Try any pagy feature or helper right in the irb/rails console even without any app or config
-- [gearbox](https://ddnexus.github.io/pagy/extras/gearbox): Automatically change the number of items per page depending on the page number
-- [i18n](http://ddnexus.github.io/pagy/extras/i18n): Use the `I18n` gem instead of the pagy-i18n implementation
-- [items](http://ddnexus.github.io/pagy/extras/items): Allow the client to request a custom number of items per page with an optional selector UI
-- [overflow](http://ddnexus.github.io/pagy/extras/overflow): Allow for easy handling of overflowing pages
-- [standalone](http://ddnexus.github.io/pagy/extras/standalone): Use pagy without any request object, nor Rack environment/gem, nor any defined `params` method
-- [support](http://ddnexus.github.io/pagy/extras/support): Extra support for features like: incremental, auto-incremental and infinite pagination
-- [trim](http://ddnexus.github.io/pagy/extras/trim): Remove the `page=1` param from the first page link
+- [Pagy::Console](https://ddnexus.github.io/pagy/docs/api/console/): Use pagy in the irb/rails console even without any app nor configuration
+- [gearbox](https://ddnexus.github.io/pagy/docs/extras/gearbox/): Automatically change the number of items per page depending on the page number
+- [i18n](https://ddnexus.github.io/pagy/docs/extras/i18n): Use the `I18n` gem instead of the faster pagy-i18n implementation
+- [items](https://ddnexus.github.io/pagy/docs/extras/items): Allow the client to request a custom number of items per page with an optional selector UI
+- [overflow](https://ddnexus.github.io/pagy/docs/extras/overflow): Allow easy handling of overflowing pages
+- [standalone](https://ddnexus.github.io/pagy/docs/extras/standalone): Use pagy without any request object, nor Rack environment/gem, nor any defined `params` method
+- [support](https://ddnexus.github.io/pagy/docs/extras/support): Add support for countless or navless pagination (incremental, auto-incremental, infinite pagination).
+- [trim](https://ddnexus.github.io/pagy/docs/extras/trim): Remove the `page=1` param from the first page link
 
 </details>
 
-See also the [How To Page](http://ddnexus.github.io/pagy/how-to)
+See also the [How To Page](https://ddnexus.github.io/pagy/docs/how-to)
 
-## 🤓 It's very well documented and supported
+## 🤓 It's well documented and supported
 
 <details open>
 
-<summary>Read the documentation...</summary>
+<summary> Documentation</summary>
 
-- [Migrate from WillPaginate and Kaminari](https://ddnexus.github.io/pagy/migration-guide) (practical guide)
-- [Quick Start](https://ddnexus.github.io/pagy/how-to#quick-start)
-- [Documentation](https://ddnexus.github.io/pagy/index)
-- [Changelog](https://github.com/ddnexus/pagy/blob/master/CHANGELOG.md)
-- [Deprecations](https://github.com/ddnexus/pagy/blob/master/CHANGELOG.md#deprecations)
+- [Migrate from WillPaginate and Kaminari](https://ddnexus.github.io/pagy/docs/migration-guide) (practical guide)
+- [Quick Start](https://ddnexus.github.io/pagy/quick-start)
+- [Documentation](https://ddnexus.github.io/pagy)
+- [How To (quick recipes)](https://ddnexus.github.io/pagy/docs/how-to/)
+- [Changelog](https://ddnexus.github.io/pagy/changelog)
+- [Deprecations](https://ddnexus.github.io/pagy/changelog#deprecations)
 
 </details>
 
 <details open>
 
-<summary>Ask for support...</summary>
+<summary> Support</summary>
 
-- [Live Support on Gitter](https://gitter.im/ruby-pagy/Lobby)
-- [Pagy Issues](https://github.com/ddnexus/pagy/issues)
+- [Discussions](https://github.com/ddnexus/pagy/discussions/categories/q-a)
+- [Issues](https://github.com/ddnexus/pagy/issues)
 
 </details>
 
 <details>
 
-<summary>Watch some great screencast...</summary>
+<summary> Screencasts (10 entries)</summary>
 
-### GoRails Screencast
+### SupeRails
 
-[![GoRails Screencast](docs/assets/images/gorails-thumbnail-w360.png)](https://gorails.com/episodes/pagination-with-pagy-gem?autoplay=1)
+[<img src="https://img.youtube.com/vi/1tsWL4EjhMo/0.jpg" width="360">](https://www.youtube.com/watch?v=1tsWL4EjhMo)
 
-**Notice**: the `pagy_nav_bootstrap` helper used in the screencast has been renamed as `pagy_bootstrap_nav` since version 2.0
+[<img src="https://img.youtube.com/vi/ScxUqW29F7E/0.jpg" width="360">](https://www.youtube.com/watch?v=ScxUqW29F7E)
 
-### Mike Rogers Screencast
+[<img src="https://img.youtube.com/vi/A9q6YwhLCyI/0.jpg" width="360">](https://www.youtube.com/watch?v=A9q6YwhLCyI)
 
-[![How To Paginate A Collection Using Pagy](docs/assets/images/mike-rogers-w360.jpg)](https://youtu.be/aILtxj_LVuA)
+### GoRails
 
-### SupeRails Screencast
+[<img src="https://img.youtube.com/vi/K4fob588tfM/0.jpg" width="360">](https://www.youtube.com/watch?v=K4fob588tfM)
 
-[![Ruby on Rails #19 gem Pagy - Ultimate Guide](docs/assets/images/superails-w360.jpg)](https://youtu.be/1tsWL4EjhMo)
+[<img src="https://img.youtube.com/vi/1sNpvTMrxl4/0.jpg" width="360">](https://www.youtube.com/watch?v=1sNpvTMrxl4)
 
-### Raul Palacio Screencast (Spanish)
+### CJ Avilla
 
-[![Raul Palacio Screncast](docs/assets/images/raul-palacio-w360.jpg)](https://youtu.be/_j3gtKf5rRs)
+[<img src="https://img.youtube.com/vi/0RtYhDIKmBY/0.jpg" width="360">](https://www.youtube.com/watch?v=0RtYhDIKmBY)
+
+### Mike Rogers
+
+[<img src="https://img.youtube.com/vi/aILtxj_LVuA/0.jpg" width="360">](https://www.youtube.com/watch?v=aILtxj_LVuA)
+
+### Deanin
+
+[<img src="https://img.youtube.com/vi/ArBUAxEA6vM/0.jpg" width="360">](https://www.youtube.com/watch?v=ArBUAxEA6vM)
+
+### Mix & Go
+
+[<img src="https://img.youtube.com/vi/HURqvNJF4T0/0.jpg" width="360">](https://www.youtube.com/watch?v=HURqvNJF4T0)
+
+### Raul Palacio (Spanish)
+
+[<img src="https://img.youtube.com/vi/_j3gtKf5rRs/0.jpg" width="360">](https://www.youtube.com/watch?v=_j3gtKf5rRs)
 
 </details>
 
 <details>
 
-<summary> Posts and tutorials...</summary>
+<summary> Posts and tutorials (19 entries)</summary>
 
-- [Migrate from WillPaginate and Kaminari](https://ddnexus.github.io/pagy/migration-guide) (practical guide)
+- [Migrate from WillPaginate and Kaminari](https://ddnexus.github.io/pagy/docs/migration-guide) (practical guide)
 - [Detailed Gems Comparison](https://ddnexus.github.io/pagination-comparison/gems.html) (charts and analysis)
 - [Benchmarks and Memory Profiles Source](http://github.com/ddnexus/pagination-comparison) (Rails app repository)
 - [Faster Pagination with Pagy](https://viblo.asia/p/faster-pagination-with-pagy-Eb85ok9W52G) introductory tutorial by Sirajus Salekin
@@ -289,6 +322,8 @@ See also the [How To Page](http://ddnexus.github.io/pagy/how-to)
 - [Stateful Tabs with Pagy](https://www.imaginarycloud.com/blog/how-to-paginate-ruby-on-rails-apps-with-pagy) by Chris Seelus
 - [Endless Scroll / Infinite Loading with Turbo Streams & Stimulus](https://www.stefanwienert.de/blog/2021/04/17/endless-scroll-with-turbo-streams/) by Stefan Wienert
 - [Pagination with Hotwire](https://www.beflagrant.com/blog/pagination-with-hotwire) by Jonathan Greenberg
+- [Pagination and infinite scrolling with Rails and the Hotwire stack](https://www.colby.so/posts/pagination-and-infinite-scrolling-with-hotwire) by David Colby
+- [Building a dynamic data grid with search and filters using rails, hotwire and ransack](https://bhserna.com/building-data-grid-with-search-rails-hotwire-ransack.html) by Benito Serna.
 - [Pagination for Beginners: What is it? Why bother?](https://benkoshy.github.io/2021/11/03/pagination-basics.html) by Ben Koshy.
 - [Handling Pagination When POSTing Complex Search Forms](https://benkoshy.github.io/2019/10/09/paginating-search-results-with-a-post-request.html) by Ben Koshy.
 - [How to Override pagy methods only in specific circumstances](https://benkoshy.github.io/2020/02/01/overriding-pagy-methods.html) by Ben Koshy.
@@ -298,17 +333,19 @@ See also the [How To Page](http://ddnexus.github.io/pagy/how-to)
 
 </details>
 
+<br>
+
 ## 📦 Repository Info
 
-<details open>
+<details>
 
-<summary><b>What's new in 5.0</b></summary>
+<summary><b>What's new in 6.0</b></summary>
 
-- This version requires `ruby 2.5+`. For `ruby <2.5` use `pagy 3+` (see the [pagy3 branch](https://github.com/ddnexus/pagy/tree/pagy3))
-- **New**: Added the [calendar](http://ddnexus.github.io/pagy/extras/calendar) extra for pagination filtering by calendar time unit (year, quarter, month, week, day)
-- **New**: Added the [gearbox](http://ddnexus.github.io/pagy/extras/gearbox) extra to automatically change the number of items depending on the page number.
-- Removed support for 4.0 deprecations (see the [Changelog](https://github.com/ddnexus/pagy/blob/master/CHANGELOG.md))
-- Big code restyling with improved performance, readability and rubocop compliance.
+- New improved [documentation](https://ddnexus.github.io/pagy)
+- New finite pagination for [meilisearch extra](https://ddnexus.github.io/pagy/docs/extras/meilisearch)
+- New `:request_path` [variable](https://ddnexus.github.io/pagy/docs/api/pagy/#other-variables) allows overriding the request path for pagination links (turbo frames)
+- Fix for the args forwarding in the `Pagy::Countless#series` for Ruby 3
+- Removed support for 5.0 deprecations (see the [Changelog](https://ddnexus.github.io/pagy/changelog))
 
 </details>
 
@@ -317,9 +354,8 @@ See also the [How To Page](http://ddnexus.github.io/pagy/how-to)
 <summary>How to contribute</summary>
 
 - Pull Requests are welcome!
-- For simple contribution you can quickly check your changes with the [Pagy::Console](https://ddnexus.github.io/pagy/api/console) or with the single file [pagy_standalone_app.ru](https://github.com/ddnexus/pagy/blob/master/apps/pagy_standalone_app.ru).
-- For more complex contributions you can use the [docker development environment](https://github.com/ddnexus/pagy/tree/master/docker) or your own environment of course.
-- If you Create A Pull Request, please ensure that the "All checks have passed" indicator gets green light on the Pull Request page. That means that the tests passed and Codecov and Rubocop are happy.
+- For simple contribution you can quickly check your changes with the [Pagy::Console](https://ddnexus.github.io/pagy/docs/api/console/) or with the single file [pagy_standalone_app.ru](https://github.com/ddnexus/pagy/blob/master/apps/pagy_standalone_app.ru).
+- If you Create A Pull Request, please ensure that the "All checks have passed" indicator gets green light on the Pull Request page (if it's not enabled, a maintainer will enable it for you).
 
 </details>
 
@@ -327,7 +363,7 @@ See also the [How To Page](http://ddnexus.github.io/pagy/how-to)
 
 <summary>Versioning</summary>
 
-- Pagy follows the [Semantic Versioning 2.0.0](https://semver.org/). Please, check the [Changelog](https://github.com/ddnexus/pagy/blob/master/CHANGELOG.md) for breaking changes introduced by mayor versions. Using [pessimistic version constraint](https://guides.rubygems.org/patterns/#pessimistic-version-constraint) in your Gemfile will ensure smooth upgrades.
+- Pagy follows the [Semantic Versioning 2.0.0](https://semver.org/). Please, check the [Changelog](https://ddnexus.github.io/pagy/changelog) for breaking changes introduced by mayor versions. Using [pessimistic version constraint](https://guides.rubygems.org/patterns/#pessimistic-version-constraint) in your Gemfile will ensure smooth upgrades.
 
 </details>
 
@@ -337,9 +373,11 @@ See also the [How To Page](http://ddnexus.github.io/pagy/how-to)
 
 - The `master` branch is the latest rubygem-published release. It also contains docs and comment changes that don't affect the published code. It is never force-pushed.
 - The `dev` branch is the development branch with the new code that will be merged in the next release. It could be force-pushed.
-- Expect any other branch to be experimental, force-pushed, rebased and/or deleted even without merging.
+- Expect any other branch to be internal, experimental, force-pushed, rebased and/or deleted even without merging.
 
 </details>
+
+<br>
 
 ## 💞 Related Projects
 
@@ -350,6 +388,7 @@ See also the [How To Page](http://ddnexus.github.io/pagy/how-to)
 
 Many thanks to:
 
+- [Ben Koshy](https://github.com/benkoshy) for his contributions to the documentation, user support and interaction with external frameworks
 - [GoRails](https://gorails.com) for the great [Pagy Screencast](https://gorails.com/episodes/pagination-with-pagy-gem?autoplay=1) and their top notch [Rails Episodes](https://gorails.com/episodes)
 - [Imaginary Cloud](https://www.imaginarycloud.com) for continually publishing high-interest articles and helping to share Pagy when it just started
 - [JetBrains](http://www.jetbrains.com?from=https%3A%2F%2Fgithub.com%2Fddnexus%2Fpagy) for their free OpenSource license
@@ -358,4 +397,4 @@ Many thanks to:
 
 ## 📃 License
 
-This project is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+[MIT](https://opensource.org/licenses/MIT)

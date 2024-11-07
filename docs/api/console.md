@@ -1,12 +1,22 @@
 ---
 title: Pagy::Console
+categories: 
+- Module
 ---
+
 # Pagy::Console
 
-Standard pagination requires controller, model, view and request to work, however you don't have to satisfy all that requirements in order to get any helper working in the irb/rails console.
+Allows you to test Pagy in an [irb](https://github.com/ruby/irb) with an environment stubbed for you:
 
-You can try any feature right away, even without any app nor configuration right in the irb/rails console:
+<details>
 
+Standard pagination requires a: controller, model, view and request object to work i.e. you need an environment. `Pagy::Console` gives you that environment. 
+
+</details>
+
+</br>
+
++++ irb
 ```ruby
 require 'pagy/console'
 include Pagy::Console
@@ -35,14 +45,30 @@ pagy_metadata(pagy)
    :size=>[1, 4, 4, 1],
 ...
 ```
++++ rails console
+
+!!!warning Warning
+
+Avoid using `rails console` with `Pagy::Console`.
+
+Use `irb` instead. However, if you need `rails console` please ensure you temporarily "unfreeze" the `Pagy::DEFAULT` hash, in your `pagy.rb` config file, otherwise you'll receive a "can't modify frozen Hash" exception:
+
+```rb
+# Pagy::DEFAULT.freeze  ## temporarily comment out this line, don't forget to uncomment when finished!
+```
+!!!
+
+Now, refer to the instructions in the [irb tab](#irb).
+
++++
 
 ## Pagy::Console module
 
-The pagy console uses the [standalone extra](../extras/standalone.md) and sets the `Pagy::DEFAULT[:url]` variable default to `"http://www.example.com/subdir"` in order to activate the standalone mode.
+The pagy console uses the [standalone extra](/docs/extras/standalone.md) and sets the `Pagy::DEFAULT[:url]` variable default to `"http://www.example.com/subdir"` in order to activate the standalone mode.
 
 Include the module in your console window in order to include also the `Pagy::Backend` and `Pagy::Frontend` modules.
 
-### pagy_extras(*extras)
+==- `pagy_extras(*extras)`
 
 Simple utility method to save some typing in the console. It will require the extras arguments. For example:
 
@@ -51,3 +77,5 @@ pagy_extras :array, :bootstrap, :support, :headers, ...
 ```
 
 You will be able to use any frontend or backend method implemented by pagy and the required extras right away.
+
+===

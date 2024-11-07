@@ -1,19 +1,38 @@
 ---
 title: Tailwind
+categories:
+- Frontend
+- Extra
 ---
+
 # Tailwind Extra Styles
+
+Ready to use style snippet for tailwind.
 
 Tailwind allows to apply styles to any DOM element, so you don't actually need a special extra to produce a different output. You can use the standard unstyled pagy helpers: i.e. the default `pagy_nav` and the `pagy_nav_js`and `pagy_nav_combo_js` provided by the [navs](navs.md) extra, and apply the styles to their classes.
 
 ## Synopsis
 
-See the [navs](navs.md) extra if you use `pagy_nav_js` or `pagy_combo_nav_js`.
+See the [navs](navs.md) extra if you use `pagy_nav_js` (it's rendered on the client, with optional responsiveness) or `pagy_combo_nav_js`:
 
-Copy and customize the following basic rules to apply the styles to the pagy CSS classes:
+Some styles you can copy / customize:
 
+!!!warning Where to paste?
+
+With normal CSS files, you can easily "import" one stylesheet into another. If you want Tailwind to do the same, then you would need [to configure tailwind to do so](https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports) or you could simply paste the following into your `tailwind.css` file.
+!!!
+
++++ Style 1
+
+![Image of Style 1](../assets/images/tailwind-example-style-1.png)
+
+||| SCSS rules
 ```scss
 @import "~tailwindcss/base";
-
+/* 
+   Add the following markup AFTER your import statements
+   Notice: this style contains all the rules for pagy-nav, pagy-nav-js and pagy-combo-nav-js
+*/
 
 .pagy-nav,
 .pagy-nav-js {
@@ -85,3 +104,49 @@ Copy and customize the following basic rules to apply the styles to the pagy CSS
   @apply text-gray-400 cursor-default;
 }
 ```
+|||
+
+
++++ Style 2
+
+![Image of Style 2](../assets/images/tailwind-example-style-2.png)
+
+||| CSS Rules
+```scss
+@import "~tailwindcss/base"; 
+/* 
+   Add the following markup AFTER your import statements
+   Notice: this style contains only the rules for pagy-nav
+*/
+
+.pagy-nav.pagination {
+  @apply isolate inline-flex -space-x-px rounded-md shadow-sm;
+}
+
+.page.next a {
+  @apply relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20;
+}
+
+.page.prev a {
+  @apply relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20;
+}
+
+.page.next.disabled {
+  @apply relative inline-flex items-center rounded-r-md border border-gray-300 bg-slate-100 px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20;
+}
+
+.page.prev.disabled {
+  @apply relative inline-flex items-center rounded-l-md border border-gray-300 bg-slate-100 px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20;
+}
+
+.page a, .page.gap {
+  @apply bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:z-20;
+}
+
+.page.active {
+  @apply z-10 border-indigo-500 bg-indigo-50 text-indigo-600 relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:z-20;
+}
+```
+|||
+
++++

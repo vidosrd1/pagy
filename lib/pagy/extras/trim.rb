@@ -1,4 +1,4 @@
-# See the Pagy documentation: https://ddnexus.github.io/pagy/extras/trim
+# See the Pagy documentation: https://ddnexus.github.io/pagy/docs/extras/trim
 # frozen_string_literal: true
 
 class Pagy # :nodoc:
@@ -14,7 +14,7 @@ class Pagy # :nodoc:
 
       lambda do |page, text = pagy.label_for(page), extra = ''|
         link = +link_proc.call(page, text, extra)
-        return link unless page == 1
+        return link unless page.to_s == '1'
 
         pagy_trim(pagy, link)
       end

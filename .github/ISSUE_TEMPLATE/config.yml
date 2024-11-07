@@ -1,6 +1,9 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Pagy Chat Support
-    url: https://gitter.im/ruby-pagy/Lobby
-    about: Please ask and answer questions here
+  - name: How To
+    url: https://ddnexus.github.io/pagy/docs/how-to/
+    about: Quick recipes to get what you want from pagy
+  - name: Pagy Q&A Discussions
+    url: https://github.com/ddnexus/pagy/discussions/categories/q-a
+    about: Ask and answer questions here
 

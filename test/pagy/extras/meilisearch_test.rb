@@ -86,7 +86,7 @@ describe 'pagy/extras/meilisearch' do
 
     describe 'Pagy.new_from_meilisearch' do
       it 'paginates results with defaults' do
-        results = MockMeilisearch::Model.search('a')
+        results = MockMeilisearch::Model.ms_search('a')
         pagy    = Pagy.new_from_meilisearch(results)
         _(pagy).must_be_instance_of Pagy
         _(pagy.count).must_equal 1000
@@ -94,12 +94,12 @@ describe 'pagy/extras/meilisearch' do
         _(pagy.page).must_equal 1
       end
       it 'paginates results with vars' do
-        results = MockMeilisearch::Model.search('b', limit: 15, offset: 30)
+        results = MockMeilisearch::Model.ms_search('b', hits_per_page: 15, page: 3)
         pagy    = Pagy.new_from_meilisearch(results, link_extra: 'X')
         _(pagy).must_be_instance_of Pagy
         _(pagy.count).must_equal 1000
         _(pagy.items).must_equal 15
-        _(pagy.page).must_equal 2
+        _(pagy.page).must_equal 3
         _(pagy.vars[:link_extra]).must_equal 'X'
       end
     end

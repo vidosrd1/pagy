@@ -1,8 +1,9 @@
-# See the Pagy documentation: https://ddnexus.github.io/pagy/extras/searchkick
+# See the Pagy documentation: https://ddnexus.github.io/pagy/docs/extras/searchkick
 # frozen_string_literal: true
 
 class Pagy # :nodoc:
-  DEFAULT[:searchkick_search_method] ||= :pagy_search
+  DEFAULT[:searchkick_search]      ||= :search
+  DEFAULT[:searchkick_pagy_search] ||= :pagy_search
 
   # Paginate Searchkick::Results objects
   module SearchkickExtra
@@ -15,7 +16,7 @@ class Pagy # :nodoc:
           args.define_singleton_method(:method_missing) { |*a| args += a }
         end
       end
-      alias_method Pagy::DEFAULT[:searchkick_search_method], :pagy_searchkick
+      alias_method Pagy::DEFAULT[:searchkick_pagy_search], :pagy_searchkick
     end
 
     # Additions for the Pagy class
@@ -39,7 +40,7 @@ class Pagy # :nodoc:
         vars               = pagy_searchkick_get_vars(nil, vars)
         options[:per_page] = vars[:items]
         options[:page]     = vars[:page]
-        results            = model.search(term, **options, &block)
+        results            = model.send(DEFAULT[:searchkick_search], term, **options, &block)
         vars[:count]       = results.total_count
 
         pagy = ::Pagy.new(vars)

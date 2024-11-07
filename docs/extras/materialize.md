@@ -1,30 +1,32 @@
 ---
 title: Materialize
+categories:
+- Frontend
+- Extra
+image: none
 ---
+
 # Materialize Extra
 
-This extra adds 3 nav helpers for the Materialize CSS [pagination component](https://materializecss.com/pagination.html).
+Add nav helpers for the Materialize CSS [pagination component](https://materializecss.com/pagination.html).
 
 ## Synopsis
 
-See [extras](../extras.md) for general usage info.
-
-In the `pagy.rb` initializer:
-
+||| pagy.rb (initializer)
 ```ruby
 require 'pagy/extras/materialize'
 ```
+|||
 
-Render the navigation links in some view...
-with a fast helper:
-
+||| View (helper)
 ```erb
 <%== pagy_materialize_nav(@pagy, ...) %>
 <%== pagy_materialize_nav_js(@pagy, ...) %>
 <%== pagy_materialize_combo_nav_js(@pagy, ...) %>
 ```
+|||
 
-See [Javascript](../api/javascript.md) if you use `pagy_materialize_nav_js` or `pagy_materialize_combo_nav_js`.
+See [Javascript](/docs/api/javascript.md) if you use `pagy_materialize_nav_js` or `pagy_materialize_combo_nav_js`.
 
 ## Files
 
@@ -34,18 +36,24 @@ See [Javascript](../api/javascript.md) if you use `pagy_materialize_nav_js` or `
 
 This extra adds 3 nav helpers to the `Pagy::Frontend` module. You can customize them by direct overriding in your own view helper.
 
-### pagy_materialize_nav(pagy)
+=== `pagy_materialize_nav(pagy)`
+
+![materialize_nav](/docs/assets/images/materialize_nav.png)
 
 This method is the same as the `pagy_nav`, but customized for Materialize.
 
-See the [pagy_nav(pagy, ...)](../api/frontend.md#pagy_navpagy-) documentation.
+See the [pagy_nav(pagy, ...)](/docs/api/frontend.md#pagy-nav-pagy) documentation.
 
-### pagy_materialize_nav_js(pagy, ...)
+=== `pagy_materialize_nav_js(pagy, ...)`
 
-See the [Javascript Navs](../api/javascript.md#javascript-navs) documentation.
+![Warning: Bootstrap style shown above as a representative example - the responsive `pagy_materialize_nav_js` looks like the `pagy_materialize_nav` helper.](/docs/assets/images/bootstrap_nav_js.png)
 
-### pagy_materialize_combo_nav_js(pagy, ...)
+It's rendered on the client, with optional responsiveness. See the [Javascript Navs](/docs/api/javascript/navs.md) documentation for more information.
 
-![materialize_combo_nav_js](../assets/images/materialize_combo_nav_js-g.png)
+=== `pagy_materialize_combo_nav_js(pagy, ...)`
 
-See the [Javascript Combo Navs](../api/javascript.md#javascript-combo-navs) documentation.
+![materialize_combo_nav_js](/docs/assets/images/materialize_combo_nav_js.png)
+
+See the [Javascript Combo Navs](/docs/api/javascript/combo-navs.md) documentation.
+
+===

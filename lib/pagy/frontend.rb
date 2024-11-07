@@ -1,4 +1,4 @@
-# See Pagy::Frontend API documentation: https://ddnexus.github.io/pagy/api/frontend
+# See Pagy::Frontend API documentation: https://ddnexus.github.io/pagy/docs/api/frontend
 # frozen_string_literal: true
 
 require 'pagy/url_helpers'
@@ -21,7 +21,7 @@ class Pagy
       p_prev = pagy.prev
       p_next = pagy.next
 
-      html = +%(<nav#{p_id} class="pagy-nav pagination" aria-label="pager">)
+      html = +%(<nav#{p_id} class="pagy-nav pagination">)
       html << if p_prev
                 %(<span class="page prev">#{link.call p_prev, pagy_t('pagy.nav.prev'), 'aria-label="previous"'}</span> )
               else

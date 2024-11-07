@@ -39,11 +39,11 @@ describe 'pagy/extras/calendar' do
     end
     it 'raises NoMethodError for #pagy_calendar_period' do
       error = assert_raises(NoMethodError) { MockApp.new.send(:pagy_calendar_period) }
-      _(error.message).must_rematch
+      _(error.message).must_match 'the pagy_calendar_period method must be implemented by the application'
     end
     it 'raises NoMethodError for #pagy_calendar_filter' do
       error = assert_raises(NoMethodError) { MockApp.new.send(:pagy_calendar_filter) }
-      _(error.message).must_rematch
+      _(error.message).must_match 'the pagy_calendar_filter method must be implemented by the application'
     end
     it 'raises ArgumentError for wrong conf' do
       _ { MockApp::Calendar.new.send(:pagy_calendar, @collection, []) }.must_raise ArgumentError
@@ -202,7 +202,7 @@ describe 'pagy/extras/calendar' do
   end
   it 'runs multiple units' do
     collection = MockCollection::Calendar.new(@collection)
-    calendar, pagy, entries = app(params: { year_page: 2, month_page: 7, page: 2 })\
+    calendar, pagy, entries = app(params: { year_page: 2, month_page: 7, page: 2 })
                               .send(:pagy_calendar, collection, year: {},
                                                                 month: {},
                                                                 pagy: { items: 10 })
@@ -210,5 +210,29 @@ describe 'pagy/extras/calendar' do
     _(calendar[:month].series).must_equal [1, 2, 3, 4, 5, 6, "7", 8, 9, 10, 11, 12]
     _(pagy.series).must_equal [1, "2", 3]
     _(entries.to_a).must_rematch
+  end
+
+  describe 'pagy_calendar_url_at' do
+    it 'returns the url' do
+      collection = MockCollection::Calendar.new(@collection)
+      calendar, _pagy, _entries = app(params: { year_page: 2, month_page: 7, page: 2 })
+                                  .send(:pagy_calendar, collection, year: {},
+                                                                    month: {},
+                                                                    pagy: { items: 10 })
+      _(app.send(:pagy_calendar_url_at, calendar, Time.zone.local(2021, 12, 21)))
+        .must_equal "/foo?page=1&year_page=1&month_page=3"
+
+      _(app.send(:pagy_calendar_url_at, calendar, Time.zone.local(2022, 2, 10)))
+        .must_equal  "/foo?page=1&year_page=2&month_page=2"
+
+      _(app.send(:pagy_calendar_url_at, calendar, Time.zone.local(2023, 11, 10)))
+        .must_equal  "/foo?page=1&year_page=3&month_page=11"
+
+      _ { app.send(:pagy_calendar_url_at, calendar, Time.zone.local(2024, 1, 10)) }
+        .must_raise  Pagy::Calendar::OutOfRangeError
+
+      _ { app.send(:pagy_calendar_url_at, calendar, Time.zone.local(2021, 9, 10)) }
+        .must_raise  Pagy::Calendar::OutOfRangeError
+    end
   end
 end
